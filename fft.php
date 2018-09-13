@@ -29,7 +29,7 @@ if($ext->status <> 'ok') {
         $cookie .= $d[1][$o] . ";";
     $uname       = $ext->logged_in_user->username;
     $req         = proccess(1, $useragent, 'feed/timeline/', $cookie);
-    $is_verified = (json_decode($req[1])->status <> ok) ? 0 : 1;
+    $is_verified = (json_decode($req[1])->status <> 'ok') ? 0 : 1;
     $uid         = $ext->logged_in_user->pk;
     echo ">> Login Success....\n";
     echo ">> Please Wait\n";
